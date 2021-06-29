@@ -1,0 +1,27 @@
+
+@using Sitecore.Mvc
+@using Sitecore.Mvc.Analytics.Extensions
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!---bootstrap css files-->
+    <link rel="stylesheet" href="/assets/SitecorePoweredBlog/css/blogsite.css">
+    <link rel="stylesheet" href="/assets/SitecorePoweredBlog/css/bootstrap-themed.min.css">
+    <!----<link rel="stylesheet" href="/assets/SitecorePoweredBlog/css/bootstrap.css"> use for design part--->
+  
+</head>
+<body>
+   <!----<div class="blog-post-card card col-lg-4 col-md-6">
+        <link rel="stylesheet" href="/assets/SitecorePoweredBlog/css/bootstrap.css">
+    </div>-->
+    <div class="container">
+
+        @Html.Sitecore().Placeholder("phMain")
+
+    </div>
+</body>
+		
+</html>

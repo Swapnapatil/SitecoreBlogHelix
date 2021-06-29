@@ -1,0 +1,18 @@
+@{
+    // var item = Sitecore.Context.Database.GetItem("/sitecore/content/Home/Blog/WebsiteSetting/LocalSetting");
+    var item = Sitecore.Context.Database.GetItem("{70FC6CD5-AEB2-4FCF-B41D-1A6A0E822C54}");
+    //@Html.Sitecore().Field("WebsiteHeading", item)
+}
+
+<!--<div style="background-color:blue">-->
+    <div class="container">
+        <div class="jumbotron text-white bg-primary">
+            <h1 class="display-3">@Html.Sitecore().Field("HeaderTitle", item)
+                </h1>
+            <p class="lead" style="color:white">
+                @*<div class="text-light"*@
+                @Html.Sitecore().Field("HeaderSubTitle", item)                  
+            </p>
+         </div>
+    </div>
+        

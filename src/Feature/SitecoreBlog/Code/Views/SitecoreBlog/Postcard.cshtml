@@ -1,0 +1,32 @@
+﻿
+@using System.Web.Mvc;
+@*@model Sitecore.Data.Items.Item*@
+@model IEnumerable<SitecoreBlogHelix.Feature.SitecoreBlog.Models.ArticleModel> 
+@{
+    //var item = Sitecore.Context.Database.GetItem("/sitecore/content/Home/Blog/WebsiteSetting/LocalSetting");
+    var item = Sitecore.Context.Database.GetItem("{96E980FC-AAC5-4A65-9501-5CB02FA81DBF}");//article template id
+}
+<main class="container blog-posts">
+
+
+    @if (Model != null)
+    {
+        <div class="row">
+            @foreach (var postcard in Model)
+            {
+            <div class="blog-post-card card col-lg-4 col-md-6">
+                @*<div class="card-img-top" width="320px" height="224px">*@
+                @Html.Raw(postcard.ArticleShortImage)
+
+                <div class="card-body bg-light">
+                    <strong class="d-inline-block mb-2 text-success">Design</strong>
+                    <h3 class="card-title">@Html.Raw(postcard.Title)</h3>
+                    <div class="mb-1 text-muted">@Html.Raw(postcard.PosteDate)</div>
+                    <p>@Html.Raw(postcard.ShortDescription)</p>
+                    <a href="#" class="btn btn-warning btn-block">Read on</a>
+                </div>
+            </div>
+            }
+        </div>
+    }
+</main>
